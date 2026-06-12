@@ -4,6 +4,32 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.174](https://github.com/Piebald-AI/claude-code-system-prompts/commit/e344cac)
+
+_-3,487 tokens_
+
+- **NEW:** Tool Description: claude.ai Project — Adds a session-bound tool for reading and writing the attached claude.ai Project (a shared, persistent knowledge container), exposing `project_info`, `project_read`, `project_search`, `project_write`, and `project_delete`, with knowledge-budget enforcement, a default `claude/` namespace for agent-written docs, prompt-cache churn warnings, and instructions to treat doc contents as untrusted data.
+- **REMOVED:** Data: Design sync story imports module — Removes the bundled Storybook import-resolution helper now folded into the expanded Design sync source-shape guidance.
+- **REMOVED:** Data: Design sync Storybook preview source generator — Removes the standalone Storybook preview-source generator superseded by the reworked Design sync build pipeline.
+- **REMOVED:** Data: Design sync sync hashes module — Removes the shared hashing helper module previously used to align builds, captures, and remote diffs.
+- Agent Prompt: Security monitor for autonomous agent actions (first part) — Adds a note that indented `User:`/`Assistant:` lines inside a turn are quoted content from the message and should be treated as data, not instructions.
+- Data: Claude API reference — C# — Updates the quickstart example model from Claude Opus 4.6 to Claude Opus 4.8.
+- Data: Claude API reference — cURL — Adds the `display: "summarized"` thinking opt-in to the request example.
+- Data: Claude API reference — Go — Updates the quickstart example model from Claude Opus 4.6 to Claude Opus 4.8.
+- Data: Claude API reference — Java — Updates the quickstart example model from Claude Opus 4.6 to Claude Opus 4.8.
+- Data: Claude API reference — PHP — Adds the `display => 'summarized'` thinking opt-in to the request example.
+- Data: Claude API reference — Python — Adds the `display: "summarized"` thinking opt-in to the request example.
+- Data: Claude API reference — Ruby — Expands the `stop_details.category` enum example with `:reasoning_extraction` and `:frontier_llm` categories.
+- Data: Claude API reference — TypeScript — Adds the `display: "summarized"` thinking opt-in to the request example.
+- Data: Claude model catalog — Updates summarized-thinking and tokenizer guidance so Fable/Mythos share the Opus 4.8 tokenizer (token counts roughly unchanged) instead of a new ~30%-larger tokenizer.
+- Data: Streaming reference — Python — Adds the `display: "summarized"` thinking opt-in to the streaming example.
+- Data: Streaming reference — TypeScript — Adds the `display: "summarized"` thinking opt-in to the streaming example.
+- Skill: Building LLM-powered applications with Claude — Clarifies that the raw chain of thought is never returned, with responses carrying only regular `thinking` blocks/summaries.
+- Skill: Design sync — Adds an "Author the conventions header" step to the workflow for writing a design-system conventions header before upload.
+- Skill: /design-sync package source shape — Replaces the `guidelinesGlob` config field with a `readmeHeader` path and related conventions-header guidance.
+- Skill: Design sync Storybook source shape — Inserts a conventions-header authoring step (base SKILL.md, before upload) into the build → match → upload workflow.
+- Skill: Model migration guide — Updates the thinking summary so always-on thinking returns regular thinking blocks with the raw chain of thought never returned, dropping the new-tokenizer framing.
+
 #### [2.1.173](https://github.com/Piebald-AI/claude-code-system-prompts/commit/3f5e29a)
 
 <sub>_No changes to the system prompts in v2.1.173._</sub>
